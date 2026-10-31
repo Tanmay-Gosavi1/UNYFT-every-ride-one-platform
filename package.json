@@ -1,0 +1,26 @@
+{
+  "name": "ride-compare",
+  "version": "1.0.0",
+  "description": "A unified multi-provider ride booking and comparison platform",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev --workspace=server",
+    "dev:client": "npm run dev --workspace=client",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "test": "npm run test --workspace=server",
+    "lint": "npm run lint --workspace=server"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
