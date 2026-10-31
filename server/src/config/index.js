@@ -53,7 +53,7 @@ if (process.env.NODE_ENV === 'production') {
 
 const config = Object.freeze({
   /** @type {'development' | 'production' | 'test'} */
-  env: process.env.NODE_ENV || 'development',
+  nodeEnv: process.env.NODE_ENV || 'development',
 
   /** @type {number} Server port */
   port: parseInt(process.env.PORT, 10) || 5000,
@@ -70,8 +70,8 @@ const config = Object.freeze({
   jwt: {
     accessSecret: process.env.JWT_ACCESS_SECRET,
     refreshSecret: process.env.JWT_REFRESH_SECRET,
-    accessExpiry: process.env.JWT_ACCESS_EXPIRY || '15m',
-    refreshExpiry: process.env.JWT_REFRESH_EXPIRY || '7d',
+    accessExpiresIn: process.env.JWT_ACCESS_EXPIRY || '15m',
+    refreshExpiresIn: process.env.JWT_REFRESH_EXPIRY || '7d',
   },
 
   /** Google OAuth 2.0 (platform login) */
